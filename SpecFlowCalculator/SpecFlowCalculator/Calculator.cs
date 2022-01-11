@@ -42,9 +42,9 @@ namespace SpecFlowCalculator
             return Calculation.Where(c => operators.Contains(c)).ToArray();
         }
 
-        private decimal GetResultFromOperator(char operand)
+        private decimal GetResultFromOperator(char operateur)
         {
-            return operand switch
+            return operateur switch
             {
                 '+' => Add(),
                 '-' => Substract(),
