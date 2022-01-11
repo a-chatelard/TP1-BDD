@@ -30,10 +30,10 @@ namespace SpecFlowCalculator.Specs.Steps
             _calculator.SecondNumber = number;
         }
 
-        [Given(@"the calculus is (.*)")]
-        public void GivenTheCalculusIs_(string calculus)
+        [Given(@"the calculation is (.*)")]
+        public void GivenTheCalculationIs_(string calculation)
         {
-            _calculator.Calculus = calculus;
+            _calculator.Calculation = calculation;
         }
 
         [When("the two numbers are added")]
@@ -62,12 +62,12 @@ namespace SpecFlowCalculator.Specs.Steps
         }
 
 
-        [When(@"the calculus is evaluated")]
-        public void WhenTheCalculusIsEvaluated()
+        [When(@"the calculation is evaluated")]
+        public void WhenTheCalculationIsEvaluated()
         {
             try
             {
-                _result = _calculator.EvaluateCalculus();
+                _result = _calculator.EvaluateCalculation();
             }
             catch(Exception e)
             {

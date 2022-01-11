@@ -34,23 +34,23 @@ Scenario: Divide by 0
 	Then the error message 'Attempted to divide by zero.' should be raised
 
 @completeCalcul
-Scenario: Calculus with more than 1 operator
-	Given the calculus is <Calculus>
-	When the calculus is evaluated
+Scenario: Calculation with more than 1 operator
+	Given the calculation is <Calculation>
+	When the calculation is evaluated
 	Then the result should be <Result>
 Examples: 
-| Calculus | Result |
-| 10*5-2   | 48     |
-| 10/2+5   | 10     |
+| Calculation | Result |
+| 10*5-2      | 48     |
+| 10/2+5      | 10     |
 
 @completeCalcul
-Scenario: Calculus contains one invalid operator
-	Given the calculus is 3*5$0
-	When the calculus is evaluated
+Scenario: Calculation contains one invalid operator
+	Given the calculation is 3*5$0
+	When the calculation is evaluated
 	Then the error message 'Invalid operation.' should be raised
 	
 @completeCalcul
-Scenario: Calculus contains one division by 0
-	Given the calculus is 3*5/0
-	When the calculus is evaluated
+Scenario: Calculation contains one division by 0
+	Given the calculation is 3*5/0
+	When the calculation is evaluated
 	Then the error message 'Attempted to divide by zero.' should be raised

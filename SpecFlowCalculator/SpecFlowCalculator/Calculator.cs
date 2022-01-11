@@ -7,7 +7,7 @@ namespace SpecFlowCalculator
 {
     public class Calculator
     {
-        public string Calculus { get; set; }
+        public string Calculation { get; set; }
         public decimal FirstNumber { get; set; }
         public decimal SecondNumber { get; set; }
 
@@ -31,15 +31,15 @@ namespace SpecFlowCalculator
             return FirstNumber / SecondNumber;
         }
 
-        private decimal[] GetSplittedCalculusNumbers()
+        private decimal[] GetSplittedNumbersFromCalculation()
         {
-            return Calculus.Split(new char[] { '+', '-', '*', '/' }).Select(n => n.ToDecimal()).ToArray();
+            return Calculation.Split(new char[] { '+', '-', '*', '/' }).Select(n => n.ToDecimal()).ToArray();
         }
 
-        private char[] GetSplittedCalculusOperators()
+        private char[] GetSplittedOperatorsFromCalculation()
         {
             char[] operators = { '+', '-', '*', '/' };
-            return Calculus.Where(c => operators.Contains(c)).ToArray();
+            return Calculation.Where(c => operators.Contains(c)).ToArray();
         }
 
         private decimal GetResultFromOperator(char operand)
@@ -54,10 +54,10 @@ namespace SpecFlowCalculator
             };
         }
 
-        public decimal EvaluateCalculus()
+        public decimal EvaluateCalculation()
         {
-            var numbers = GetSplittedCalculusNumbers();
-            var operators = GetSplittedCalculusOperators();
+            var numbers = GetSplittedNumbersFromCalculation();
+            var operators = GetSplittedOperatorsFromCalculation();
             decimal result = 0;
             FirstNumber = numbers[0];
             for (int i = 0; i < numbers.Length - 1; i++)

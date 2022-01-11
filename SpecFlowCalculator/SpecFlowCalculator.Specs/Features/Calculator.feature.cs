@@ -254,7 +254,7 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        public virtual void CalculusWithMoreThan1Operator(string calculus, string result, string[] exampleTags)
+        public virtual void CalculationWithMoreThan1Operator(string calculation, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "completeCalcul"};
@@ -264,9 +264,9 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Calculus", calculus);
+            argumentsOfScenario.Add("Calculation", calculation);
             argumentsOfScenario.Add("Result", result);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculus with more than 1 operator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculation with more than 1 operator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -288,10 +288,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 38
- testRunner.Given(string.Format("the calculus is {0}", calculus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("the calculation is {0}", calculation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 39
- testRunner.When("the calculus is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the calculation is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 40
  testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -300,32 +300,32 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Calculus with more than 1 operator, 10*5-2", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Calculation with more than 1 operator, 10*5-2", new string[] {
                 "completeCalcul"}, SourceLine=42)]
-        public virtual void CalculusWithMoreThan1Operator_105_2()
+        public virtual void CalculationWithMoreThan1Operator_105_2()
         {
 #line 37
-this.CalculusWithMoreThan1Operator("10*5-2", "48", ((string[])(null)));
+this.CalculationWithMoreThan1Operator("10*5-2", "48", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Calculus with more than 1 operator, 10/2+5", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Calculation with more than 1 operator, 10/2+5", new string[] {
                 "completeCalcul"}, SourceLine=42)]
-        public virtual void CalculusWithMoreThan1Operator_1025()
+        public virtual void CalculationWithMoreThan1Operator_1025()
         {
 #line 37
-this.CalculusWithMoreThan1Operator("10/2+5", "10", ((string[])(null)));
+this.CalculationWithMoreThan1Operator("10/2+5", "10", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Calculus containing one invalid operator", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Calculation contains one invalid operator", new string[] {
                 "completeCalcul"}, SourceLine=46)]
-        public virtual void CalculusContainingOneInvalidOperator()
+        public virtual void CalculationContainsOneInvalidOperator()
         {
             string[] tagsOfScenario = new string[] {
                     "completeCalcul"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculus containing one invalid operator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculation contains one invalid operator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 47
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -347,10 +347,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 48
- testRunner.Given("the calculus is 3*5$0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the calculation is 3*5$0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 49
- testRunner.When("the calculus is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the calculation is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 50
  testRunner.Then("the error message \'Invalid operation.\' should be raised", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -359,14 +359,14 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Calculus containing one division by 0", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Calculation contains one division by 0", new string[] {
                 "completeCalcul"}, SourceLine=52)]
-        public virtual void CalculusContainingOneDivisionBy0()
+        public virtual void CalculationContainsOneDivisionBy0()
         {
             string[] tagsOfScenario = new string[] {
                     "completeCalcul"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculus containing one division by 0", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculation contains one division by 0", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -388,10 +388,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 54
- testRunner.Given("the calculus is 3*5/0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the calculation is 3*5/0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 55
- testRunner.When("the calculus is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the calculation is evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 56
  testRunner.Then("the error message \'Attempted to divide by zero.\' should be raised", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
